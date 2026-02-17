@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify Liked Songs Grid</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">Spotify Library Tool</p>
+          <h1>Liked Songs Grid</h1>
+          <p class="subhead">Authenticate, browse a massive grid of your saved tracks, and remove only what you select.</p>
+        </div>
+        <div class="auth">
+          <label class="input">
+            <span>Spotify Client ID</span>
+            <input id="clientId" placeholder="Paste your Client ID" autocomplete="off" />
+          </label>
+          <div class="auth-actions">
+            <button id="loginBtn">Connect Spotify</button>
+            <button id="logoutBtn" class="ghost" disabled>Sign out</button>
+          </div>
+          <p class="hint">Redirect URI: <code>http://localhost:8000</code></p>
+        </div>
+      </header>
+
+      <section class="toolbar">
+        <div class="stats">
+          <span id="status"></span>
+          <span class="count-wrap"><span id="count"></span><span id="countSpinner" class="spinner" aria-hidden="true"></span></span>
+        </div>
+        <div class="actions">
+          <button id="removeBtn" class="danger" disabled>Remove selected</button>
+        </div>
+      </section>
+
+      <section class="grid-wrap">
+        <div id="grid" class="grid" aria-live="polite"></div>
+      </section>
+    </main>
+
+    <template id="cardTemplate">
+      <button class="card" type="button">
+        <img class="cover" alt="" />
+        <div class="meta">
+          <h3 class="title"></h3>
+          <p class="artist"></p>
+        </div>
+        <span class="check">✓</span>
+      </button>
+    </template>
+
+    <script src="app.js"></script>
+  </body>
+</html>
