@@ -1,6 +1,6 @@
 # Spotify Liked Songs Grid
 
-Local web app that authenticates with Spotify, shows a massive scrolling grid of your liked songs, and lets you remove only the tracks you select.
+Local web app that authenticates with Spotify, shows a scrolling grid of your liked songs, and lets you remove the tracks you select.
 
 ![Demo](demo.png)
 
