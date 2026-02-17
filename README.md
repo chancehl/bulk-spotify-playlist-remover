@@ -2,6 +2,8 @@
 
 Local web app that authenticates with Spotify, shows a massive scrolling grid of your liked songs, and lets you remove only the tracks you select.
 
+![Demo](demo.png)
+
 ## Setup
 
 1. Visit the Spotify Developer Dashboard: https://developer.spotify.com/dashboard
